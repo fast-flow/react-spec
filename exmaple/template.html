@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>data-flow</title>
+</head>
+<body>
+<div id="app"></div>
+<script src="http://unpkg.com/es5-shim/es5-shim.min.js"></script>
+<script src="http://unpkg.com/es5-shim/es5-sham.min.js"></script>
+<script src="http://unpkg.com/console-polyfill"></script>
+<script src="http://unpkg.com/react@0.14.8/dist/react.min.js"></script>
+<script src="http://unpkg.com/react-dom@0.14.8/dist/react-dom.min.js"></script>
+<script src="http://unpkg.com/react@0.13.1/dist/JSXTransformer.js"></script>
+<script src="https://pkgzip.com/?extend@3.0.1" ></script>
+<script>
+window.extend = window.pkgzip['extend']
+</script>
+<script type="text/jsx" >
+var App = React.createClass({
+    render: function () {
+        return (
+            <div>app</div>
+        )
+    }
+})
+ReactDOM.render(
+    (
+        <App />
+    ),
+    document.getElementById('app')
+)
+</script>
+</body>
+</html>
