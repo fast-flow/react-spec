@@ -184,3 +184,29 @@ export default Link;
 > 为什么? [`isMounted` 反人类设计模式:()][anti-pattern], 在 ES6 classes 中无法使用， 官方将在未来的版本里删除此方法.
 
 [anti-pattern]: https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html
+
+
+## value onChange data 
+
+表单控件的输入接口为 `value` ，`value` 可以是一个 `object` 包含多个值
+表单控件的输出接口优先为 `onChange`
+表单空间的数据配置接口为 `data` 
+
+```jsx
+<Search
+    value={self.state.search}
+    onChange={function (value) {
+        self.setState(search: value)
+    }}
+    data={{
+        classify: [
+            '2017-A',
+            '2017-B'
+        ]
+    }}
+    themes="night"
+    onSubmit={function() {
+        console.log('submit')
+    }}
+/>
+```
