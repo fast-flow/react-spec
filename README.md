@@ -189,19 +189,23 @@ export default Link;
 ## value onChange data 
 
 表单控件的输入接口为 `value` ，`value` 可以是一个 `object` 包含多个值
-表单控件的输出接口优先为 `onChange`
-表单空间的数据配置接口为 `data` 
+表单控件的输出接口优先为 `onChange`，`onChange` 回调参数与 `value` 格式一致
+表单控件的数据配置接口为 `data` 
 
 ```jsx
 <Search
-    value={self.state.search}
+    value={{
+      keyword: '张三',
+      classify: ['2017-A','2017-C']
+    }}
     onChange={function (value) {
         self.setState(search: value)
     }}
     data={{
         classify: [
             '2017-A',
-            '2017-B'
+            '2017-B',
+            '2017-C'
         ]
     }}
     themes="night"
